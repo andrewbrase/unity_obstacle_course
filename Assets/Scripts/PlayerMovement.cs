@@ -3,18 +3,22 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float moveSpeed = 10f;
+    public float moveSpeed = 15f;
+    public float playerJumpForce = 10f;
+    private Rigidbody playerRigidBody;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        playerRigidBody = GetComponent<Rigidbody>();
+        playerRigidBody.freezeRotation = true;
     }
 
     // Update is called once per frame
     void Update()
     {
         processMovement();
+        processPlayerJump();
     }
 
     void processMovement()
@@ -41,5 +45,18 @@ public class PlayerMovement : MonoBehaviour
             moveDirection.Normalize();
             transform.position += moveDirection * moveSpeed * Time.deltaTime;
         }
+    }
+
+    void processPlayerJump()
+    {
+        if (Keyboard.current.spaceKey.wasPressedThisFrame && playerIsGrounded())
+        {
+            playerRigidBody.AddForce(Vector3.up * playerJumpForce, ForceMode.Impulse);
+        }
+    }
+    
+    bool playerIsGrounded()
+    {
+        return Physics.Raycast(transform.position, Vector3.down, 1.1f);
     }
 }
