@@ -58,7 +58,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Vector2 mouseDelta = Mouse.current.delta.ReadValue();
             transform.Rotate(Vector3.up, mouseDelta.x * playerCameraRotationSpeed);
-            Camera.main.transform.Rotate(Vector3.left, mouseDelta.y * playerCameraRotationSpeed * Time.deltaTime);
+            Camera.main.transform.Rotate(Vector3.left, mouseDelta.y * playerCameraRotationSpeed);
         }
     }
 
