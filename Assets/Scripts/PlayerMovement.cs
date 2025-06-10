@@ -5,7 +5,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public float playerMoveSpeed = 15f;
     public float playerJumpForce = 10f;
-    float playerCameraRotationSpeed = 0.1f;
+    [SerializeField] float playerCameraRotationSpeed = 0.1f;
     private Rigidbody playerRigidBody;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -58,7 +58,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Vector2 mouseDelta = Mouse.current.delta.ReadValue();
             transform.Rotate(Vector3.up, mouseDelta.x * playerCameraRotationSpeed);
-            Camera.main.transform.Rotate(Vector3.left, mouseDelta.y * playerCameraRotationSpeed);
+            Camera.main.transform.Rotate(Vector3.left, mouseDelta.y * playerCameraRotationSpeed * Time.deltaTime);
         }
     }
 
