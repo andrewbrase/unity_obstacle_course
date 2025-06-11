@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float playerMoveSpeed = 15f;
+    public float playerMoveSpeed = 10f;
     public float playerJumpForce = 10f;
     [SerializeField] float playerCameraRotationSpeed = 0.1f;
     private Rigidbody playerRigidBody;
