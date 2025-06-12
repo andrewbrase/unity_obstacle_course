@@ -1,6 +1,7 @@
 .vscode/
 Assembly-CSharp-Editor.csproj
 Assembly-CSharp.csproj
+
 Assets/InputSystem_Actions.inputactions
 Assets/InputSystem_Actions.inputactions.meta
 Assets/Materials.meta
@@ -9,15 +10,19 @@ Assets/Readme.asset
 Assets/Readme.asset.meta
 Assets/Scenes.meta
 Assets/Scenes/
+
 Assets/Scripts.meta
 Assets/Scripts/CubeMovement.cs.meta
 Assets/Scripts/PlayerMovement.cs.meta
+Assets/Scripts/AreaOnTriggerEnter.cs.meta
+
 Assets/Settings.meta
 Assets/Settings/
 Assets/TextMesh Pro.meta
 Assets/TextMesh Pro/
 Assets/TutorialInfo.meta
 Assets/TutorialInfo/
+
 Library/
 Logs/
 Packages/
