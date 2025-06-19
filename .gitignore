@@ -6,6 +6,8 @@ Assets/InputSystem_Actions.inputactions
 Assets/InputSystem_Actions.inputactions.meta
 Assets/Materials.meta
 Assets/Materials/
+Assets/MeshObjects
+Assets/MeshObjects.meta
 Assets/Readme.asset
 Assets/Readme.asset.meta
 Assets/Scenes.meta
@@ -15,6 +17,11 @@ Assets/Scripts.meta
 Assets/Scripts/CubeMovement.cs.meta
 Assets/Scripts/PlayerMovement.cs.meta
 Assets/Scripts/AreaOnTriggerEnter.cs.meta
+Assets/Scripts/PlayerCollision.cs.meta
+Assets/Scripts/udemy_course_scripts/
+Assets/Scripts/udemy_course_scripts.meta
+Assets/Scripts/CubeRotation.cs.meta
+Assets/Scripts/PlayerCheckpoint.cs.meta
 
 Assets/Settings.meta
 Assets/Settings/
@@ -22,6 +29,9 @@ Assets/TextMesh Pro.meta
 Assets/TextMesh Pro/
 Assets/TutorialInfo.meta
 Assets/TutorialInfo/
+
+Assets/New Terrain.asset
+Assets/New Terrain.asset.meta
 
 Library/
 Logs/
