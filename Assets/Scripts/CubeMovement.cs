@@ -15,7 +15,6 @@ public class CubeMovement : MonoBehaviour
 
     void Update()
     {
-        // Calculate the new Y position using PingPong for smooth up and down movement
         float newY = cubeInitialY + Mathf.PingPong((Time.time + timeOffset) * cubeMoveSpeed, cubeMoveHeight);
         transform.position = new Vector3(transform.position.x, newY, transform.position.z);
     }
