@@ -26,7 +26,6 @@ public class PlayerStats : MonoBehaviour
         {
             InitiatePlayerDeath();
         }
-        Debug.Log($"Player took {amount} damage. Current health: {health}");
     }
 
     private void InitiatePlayerDeath()
