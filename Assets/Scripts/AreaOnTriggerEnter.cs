@@ -4,6 +4,7 @@ public class AreaOnTriggerEnter : MonoBehaviour
 {
     public enum AreaType { EndGoal, Hazard, Checkpoint1 }
     public AreaType areaType;
+    [SerializeField] private GameObject EndGoalUI;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -12,6 +13,15 @@ public class AreaOnTriggerEnter : MonoBehaviour
             if (areaType == AreaType.EndGoal)
             {
                 Debug.Log("You Win!");
+
+                if (EndGoalUI != null)
+                {
+                    EndGoalUI.SetActive(true);
+                }
+                else
+                {
+                    Debug.LogWarning("EndGoalUI not found in the scene.");
+                }
             }
             if (areaType == AreaType.Checkpoint1)
             {
